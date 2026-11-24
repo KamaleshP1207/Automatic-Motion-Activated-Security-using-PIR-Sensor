@@ -60,14 +60,33 @@ Step 7: Save Your Work
 
 
 # Code:
+```
+int buttonState = 0;
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+void loop()
+{
+  buttonState = digitalRead(2);
+  if (buttonState == HIGH)
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10);
+}
 
-
-
+```
 # Output:
+<img width="1471" height="756" alt="Screenshot 2025-10-28 152705" src="https://github.com/user-attachments/assets/6c7f8775-2f66-4d13-bcb2-d0afd916827d" />
 
 
 
 
 # Result:
 The PIR sensor successfully detected motion and triggered the Arduino to turn ON the built-in LED. The LED remained OFF when no motion was present, confirming correct circuit and code functionality.
-
